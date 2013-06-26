@@ -1,21 +1,19 @@
-# Rapid7 Windows
+# Windows Security
 ## Description
 This cookbook has recipes to enable/disable some Windows security features.
 
-### TODO: Document which recipes work with which Windows flavors.
-
 ## Requirements
 ### Platform
+### TODO: Specify which recipes work with which Windows flavors.
 * Windows
 
 ## Attributes
-
+* `node[:windows][:security]` A hash of Windows security options that are read by the `windows-security::default` recipe.
+* `node[:windows][:security][:aslr]` What to set the ASLR registry key to. Available: 0, 1, -1 Default: 1
+* `node[:windows][:security][:dep]` What to set the DEP registry key to. Available: AlwaysOff, AlwaysOn, OptIn, or OptOut Default: OptIn
+ 
 ## Usage
-Set the `node[:windows][:dep]` and/or `node[:windows][:dep]` attributes and
-either run the specific recipe or the `rapid7-windows::default` recipe which will check all Rapid7 Windows attributes and update the node the specified state.
-
-
-The ruby format would be:
+Override the `node[:windows][:security]` hash and run a specific recipe or run `windows-security::default` to Windows security settings.
 
 ```ruby
 {
@@ -26,8 +24,8 @@ The ruby format would be:
 }
 ```
 
-### rapid7-windows::default
-Checks all attributes defined in the attributes file: [`rapid-windows::default`](https://github.com/rapid7-cookbooks/rapid7-windows/blob/master/attributes/default.rb).
+### windows-security::default
+Checks all attributes defined in the attributes file: [`windows-security::default`](https://github.com/rapid7-cookbooks/rapid7-windows/blob/master/attributes/default.rb).
 
 ## License and Author
 ### Authors
