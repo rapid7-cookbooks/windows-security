@@ -13,8 +13,8 @@ end
 
 include_recipe 'windows::reboot_handler'
 
-windows_batch "update DEP to #{node[:windows][:dep]}" do
-  code "bcdedit.exe /set {current} nx #{node[:windows][:dep]}"
+windows_batch "update DEP to #{node[:windows][:security][:dep]}" do
+  code "bcdedit.exe /set {current} nx #{node[:windows][:security][:dep]}"
 end
 
 windows_reboot 30 do
