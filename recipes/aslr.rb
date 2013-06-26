@@ -17,7 +17,7 @@ registry_key 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Manag
   values [{
     :name => 'MoveImages',
     :type => :dword,
-    :data => node[:windows][:aslr]
+    :data => node[:windows][:security][:aslr]
   }]
   action :create
 end
