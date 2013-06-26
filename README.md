@@ -26,7 +26,7 @@ The ruby format would be:
 }
 ```
 
-### mirror::default
+### rapid7-windows::default
 Checks all attributes defined in the attributes file: [`rapid-windows::default`](https://github.com/rapid7-cookbooks/rapid7-windows/blob/master/attributes/default.rb).
 
 ## License and Author
