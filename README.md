@@ -1,5 +1,4 @@
-# Windows Security
-[![Build Status](https://secure.travis-ci.org/rapid7-cookbooks/windows-security.png)](http://travis-ci.org/rapid7-cookbooks/windows-security)
+# Windows Security [![Build Status](https://secure.travis-ci.org/rapid7-cookbooks/windows-security.png)](http://travis-ci.org/rapid7-cookbooks/windows-security)
 ## Description
 This cookbook has recipes to enable/disable some Windows security features.
 
